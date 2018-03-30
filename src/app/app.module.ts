@@ -7,12 +7,11 @@ import { MDBBootstrapModule } from './typescripts/free';
 import { AppComponent } from './app.component';
 import { ApiModule } from 'app/services/api';
 
-import {MatProgressBar} from '@angular/material';
+import {MatProgressBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MatProgressBar
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,11 +19,10 @@ import {MatProgressBar} from '@angular/material';
     FormsModule,
     HttpModule,
     MDBBootstrapModule.forRoot(),
-    ApiModule    
+    ApiModule,
+    MatProgressBarModule  
   ],
-  exports: [
-    MatProgressBar
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
   schemas:   [ NO_ERRORS_SCHEMA ]
