@@ -1,0 +1,33 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <logo>
+    <a class="navbar-brand" href="#">
+      AAXIS NGX TEST
+    </a>
+  </logo>
+
+  <links>
+    <form class="form-inline waves-light" mdbRippleRadius>
+      <input class="form-control mr-sm-2" type="text" placeholder="Type here..." #input (keyup)="this.updateItems(input.value);">
+    </form>
+  </links>
+
+</mdb-navbar>
+<mat-progress-bar [mode]="loading ? 'query' : 'determinate'" progress="0"></mat-progress-bar>
+<div class="main-wrapper">
+  <div class="container">
+    <div class="row">
+      <section class="my-5">
+        <ul class="list-unstyled">
+          <li class="media" *ngFor="let item of items">
+            <img class="d-flex mr-3" [src]="item.imageUrl" [alt]="item.itemId" [title]="item.itemId">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">{{item.itemId}}: {{item.name}}</h5>
+              {{item.nameComplete}}
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
