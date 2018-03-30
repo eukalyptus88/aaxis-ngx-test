@@ -20,7 +20,7 @@ import {MatProgressBarModule} from '@angular/material';
     HttpModule,
     MDBBootstrapModule.forRoot(),
     ApiModule,
-    MatProgressBarModule  
+    MatProgressBarModule
   ],
   exports: [],
   providers: [],
